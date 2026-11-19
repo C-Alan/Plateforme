@@ -1,0 +1,269 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#0B0B12] text-gray-100 min-h-screen selection:bg-[#FF5E00] selection:text-white transition-colors duration-300;
+    background-image: 
+      radial-gradient(circle at 15% 10%, rgba(255, 94, 0, 0.12) 0%, transparent 40%),
+      radial-gradient(circle at 85% 20%, rgba(139, 92, 246, 0.10) 0%, transparent 40%),
+      radial-gradient(circle at 50% 70%, rgba(255, 184, 0, 0.08) 0%, transparent 50%);
+    background-attachment: fixed;
+  }
+}
+
+/* ====================================================
+   MODE CLAIR / LIGHT THEME STYLES (COMPLET & HARMONISÉ)
+   ==================================================== */
+body.light-theme {
+  background-color: #F8FAFC !important;
+  color: #0F172A !important;
+  background-image: 
+    radial-gradient(circle at 15% 10%, rgba(255, 94, 0, 0.07) 0%, transparent 45%),
+    radial-gradient(circle at 85% 20%, rgba(139, 92, 246, 0.05) 0%, transparent 45%),
+    radial-gradient(circle at 50% 70%, rgba(255, 184, 0, 0.06) 0%, transparent 50%) !important;
+}
+
+/* En-tête / Header Navbar en mode clair */
+body.light-theme header {
+  background-color: rgba(255, 255, 255, 0.94) !important;
+  border-bottom-color: rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+body.light-theme header .text-white {
+  color: #0F172A !important;
+}
+
+body.light-theme header .text-amber-200\/60 {
+  color: #64748B !important;
+}
+
+/* Barre de navigation mobile inférieure en mode clair */
+body.light-theme nav.fixed,
+body.light-theme nav {
+  background-color: rgba(255, 255, 255, 0.96) !important;
+  border-top-color: rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 -4px 25px rgba(0, 0, 0, 0.06) !important;
+}
+
+body.light-theme nav button .text-gray-400,
+body.light-theme nav button span.text-gray-400 {
+  color: #64748B !important;
+}
+
+/* Panneaux Glass & Conteneurs en mode clair */
+.glass-panel {
+  background: rgba(22, 22, 38, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.light-theme .glass-panel {
+  background: rgba(255, 255, 255, 0.94) !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05), 0 4px 10px -2px rgba(0, 0, 0, 0.02) !important;
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-panel-hover:hover {
+  background: rgba(28, 28, 48, 0.85);
+  border-color: rgba(255, 122, 0, 0.35);
+  box-shadow: 0 10px 30px -10px rgba(255, 94, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+body.light-theme .glass-panel-hover:hover {
+  background: #FFFFFF !important;
+  border-color: rgba(255, 122, 0, 0.45) !important;
+  box-shadow: 0 14px 35px -8px rgba(255, 94, 0, 0.18) !important;
+}
+
+/* Cartes & Conteneurs sombres convertis en cartes claires */
+body.light-theme .bg-\[\#12121E\],
+body.light-theme .bg-\[\#121820\],
+body.light-theme .bg-\[\#121820\]\/90,
+body.light-theme .bg-\[\#0E0E18\],
+body.light-theme .bg-\[\#0E0E18\]\/85,
+body.light-theme .bg-\[\#0E0E18\]\/95,
+body.light-theme .bg-\[\#0E0E18\]\/80,
+body.light-theme .bg-\[\#10101C\],
+body.light-theme .bg-\[\#0E0E16\],
+body.light-theme .bg-\[\#12121A\],
+body.light-theme .bg-\[\#14141E\],
+body.light-theme .bg-\[\#151522\],
+body.light-theme .bg-\[\#151522\]\/90,
+body.light-theme .bg-\[\#161622\],
+body.light-theme .bg-\[\#161624\],
+body.light-theme .bg-\[\#161626\],
+body.light-theme .bg-\[\#171724\],
+body.light-theme .bg-\[\#181824\],
+body.light-theme .bg-\[\#1E1E2C\],
+body.light-theme .bg-\[\#0B0B14\],
+body.light-theme .bg-\[\#0B0B14\]\/95,
+body.light-theme .bg-\[\#121218\] {
+  background-color: #FFFFFF !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Pistes secondaires & fonds d'arrière-plan */
+body.light-theme .bg-\[\#0F0F1A\],
+body.light-theme .bg-\[\#0A0A10\],
+body.light-theme .bg-\[\#101018\],
+body.light-theme .bg-\[\#0E0E14\],
+body.light-theme .bg-\[\#0D0D11\] {
+  background-color: #F1F5F9 !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Pastilles subtiles en mode clair (sauf visionneuse story plein écran) */
+body.light-theme :not(.story-modal) .bg-white\/5,
+body.light-theme :not(.story-modal) .bg-white\/10,
+body.light-theme :not(.story-modal) .bg-white\/\[0\.02\],
+body.light-theme :not(.story-modal) .bg-white\/\[0\.04\],
+body.light-theme :not(.story-modal) .bg-black\/20 {
+  background-color: #F1F5F9 !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  color: #334155 !important;
+}
+
+/* Bordures en mode clair */
+body.light-theme :not(.story-modal) .border-white\/5,
+body.light-theme :not(.story-modal) .border-white\/10,
+body.light-theme :not(.story-modal) .border-white\/15,
+body.light-theme :not(.story-modal) .border-white\/20,
+body.light-theme :not(.story-modal) .border-white\/25,
+body.light-theme :not(.story-modal) .border-white\/\[0\.06\],
+body.light-theme :not(.story-modal) .border-white\/\[0\.08\] {
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Typographie & Contraste de texte en mode clair */
+body.light-theme h1,
+body.light-theme h2:not(.story-text),
+body.light-theme h3:not(.story-text),
+body.light-theme h4:not(.story-text) {
+  color: #0F172A !important;
+}
+
+body.light-theme p:not(.story-text) {
+  color: #475569;
+}
+
+body.light-theme .text-gray-400:not(.story-text),
+body.light-theme .text-gray-300:not(.story-text),
+body.light-theme .text-gray-300\/90:not(.story-text),
+body.light-theme .text-gray-300\/80:not(.story-text) {
+  color: #475569 !important;
+}
+
+body.light-theme .text-gray-200:not(.story-text) {
+  color: #1E293B !important;
+}
+
+/* Conversion du texte blanc en texte sombre à l'intérieur des cartes (sauf boutons colorés) */
+body.light-theme .glass-panel .text-white:not(button):not(span.font-mono):not(.keep-white),
+body.light-theme article .text-white:not(button):not(span.font-mono):not(.keep-white) {
+  color: #0F172A !important;
+}
+
+/* Inputs & Formulaires en mode clair */
+body.light-theme input,
+body.light-theme select,
+body.light-theme textarea {
+  background-color: #FFFFFF !important;
+  border-color: #CBD5E1 !important;
+  color: #0F172A !important;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03) !important;
+}
+
+body.light-theme input::placeholder,
+body.light-theme textarea::placeholder {
+  color: #94A3B8 !important;
+}
+
+/* Modales & Boîtes de dialogue en mode clair */
+body.light-theme .bg-\[\#161622\] {
+  background-color: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15) !important;
+}
+
+body.light-theme .bg-white\/\[0\.02\] {
+  background-color: #F8FAFC !important;
+  border-bottom-color: #E2E8F0 !important;
+}
+
+/* Carte de paiement décomposé en mode clair */
+body.light-theme .from-\[\#1F1710\].to-\[\#120E0A\] {
+  background: linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%) !important;
+  border-color: rgba(255, 122, 0, 0.3) !important;
+}
+
+body.light-theme .from-\[\#1F1710\].to-\[\#120E0A\] .text-white {
+  color: #0F172A !important;
+}
+
+/* Articles du fil d'actualité en mode clair */
+body.light-theme article {
+  background: #FFFFFF !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 8px 25px -4px rgba(0, 0, 0, 0.05) !important;
+}
+
+body.light-theme article .text-white {
+  color: #0F172A !important;
+}
+
+body.light-theme article .bg-\[\#12121E\]\/60 {
+  background-color: #F8FAFC !important;
+  border-top-color: #E2E8F0 !important;
+}
+
+/* Artist KPI Cards in light mode */
+body.light-theme .from-\[\#13221B\] {
+  background: linear-gradient(135deg, #ECFDF5 0%, #F0FDF4 100%) !important;
+  border-color: rgba(16, 185, 129, 0.3) !important;
+}
+
+body.light-theme .from-\[\#24170E\] {
+  background: linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%) !important;
+  border-color: rgba(249, 115, 22, 0.3) !important;
+}
+
+body.light-theme .from-\[\#0F1E28\] {
+  background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%) !important;
+  border-color: rgba(14, 165, 233, 0.3) !important;
+}
+
+body.light-theme .from-\[\#13221B\] .text-white,
+body.light-theme .from-\[\#24170E\] .text-white,
+body.light-theme .from-\[\#0F1E28\] .text-white {
+  color: #0F172A !important;
+}
+
+/* Custom scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Shimmer animation for VIP badges */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
